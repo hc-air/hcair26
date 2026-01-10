@@ -135,13 +135,42 @@ ul {
     padding: 40px 20px;
     color: white;
     /* background-image: linear-gradient(135deg,#333, black, #333); */
-    background-image: linear-gradient(45deg, rgba(24, 42, 83, 1), rgba(118,37,131,1), rgba(255, 162, 2, 1));
+    background-image: url(../images/bcg.png);
+    /* background-image: linear-gradient(45deg, rgba(24, 42, 83, 1), rgba(118,37,131,1), rgba(255, 162, 2, 1)); */
     background-size: cover;
     background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 55px;
+    position: relative;
+}
+
+.title-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.title-container > div {
+    position: relative;
+    z-index: 2;
+}
+
+.title-container img {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    vertical-align: middle;
+}
+
+.title-container h1,
+.title-container h4,
+.title-container .subtitle {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1), 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer-banner {
